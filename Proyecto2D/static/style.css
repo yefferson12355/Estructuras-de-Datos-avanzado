@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Evita barras de desplazamiento */
+    font-family: sans-serif;
+}
+
+#canvas-container {
+    position: relative; /* Importante para el z-index */
+    z-index: 1;
+}
+
+#canvas-container canvas {
+    border: 2px solid #fbbf24;
+    box-shadow: 0 0 30px rgba(251, 191, 36, 0.2);
+    border-radius: 8px;
+}
+
+/* ESTILO DEL BOTÓN */
+#btn-siguiente {
+    position: absolute;
+    bottom: 30px; /* Separado del fondo */
+    z-index: 10; /* Encima del canvas */
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0f172a;
+    background-color: #fbbf24; /* Amarillo Candelaria */
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(251, 191, 36, 0.6);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+#btn-siguiente:hover {
+    background-color: #fff; /* Blanco al pasar el mouse */
+    transform: scale(1.05); /* Se agranda un poco */
+}
+
+#btn-siguiente:active {
+    transform: scale(0.95); /* Efecto de clic */
+}
