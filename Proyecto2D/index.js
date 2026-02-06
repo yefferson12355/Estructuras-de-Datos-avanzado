@@ -47,7 +47,7 @@ function windowResized() {
     actualizarObjetivos();
 }
 
-/** * ALGORITMO DE TRASLACIÓN ORDENADA
+/** * ALGORITMO DE TRASLACIÓN 
  * Evita que los drones se crucen en el camino ordenándolos por su posición X.
  */
 function actualizarObjetivos() {
@@ -131,8 +131,7 @@ class Dron {
         let fuerzaLlegada = this.steerArrive(distTarget);
         this.acc.add(fuerzaLlegada);
 
-        // 2. SEPARACIÓN INTELIGENTE (Solo si está cerca de la meta)
-        // Esto evita choques masivos durante el viaje largo
+        // 2. SEPARACION
         if (distTarget < CONFIG.UMBRAL_FANTASMA && this.activo) {
             let sep = this.steerSeparation(lista);
             sep.mult(1.5);
