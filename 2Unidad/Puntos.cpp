@@ -7,18 +7,15 @@
 
 using namespace std;
 
-// ==========================================
-// PARTE 1: DEFINICIÓN DEL OBJETO
-// ==========================================
+
+
 struct Punto {
     double x;
     double y;
-    char nombre; // Identificador automático (A, B, C...)
+    char nombre; // A....
 };
 
-// ==========================================
-// PARTE 2: EL "CEREBRO" (CLASE PLANOCARTESIANO)
-// ==========================================
+
 class PlanoCartesiano {
 private:
     vector<Punto> puntos;
